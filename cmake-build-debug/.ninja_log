@@ -1,0 +1,11 @@
+# ninja log v5
+1	343	1669311093623802864	src/CMakeFiles/Manager.dir/Manager.cpp.o	9de39551c69e546
+344	350	1669311093631802687	src/libManager.a	c11a49fa9aa9d04a
+0	444	1669311093723800662	CMakeFiles/VDSProject.dir/src/main.cpp.o	938fd6655f3dc281
+444	553	1669311093831798286	VDSProject	ce805ced6ae9a14e
+2	1813	1669371705646741717	src/test/CMakeFiles/VDSProject_test.dir/main_test.cpp.o	acb129cd223dc26d
+1	2143	1669371705978737235	../gtest/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	83576dac16badf9
+1	6414	1669371710242679640	../gtest/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	ab48ef860bfb8637
+6414	6491	1669371710322678560	lib/libgtest.a	5b29a1f93aae9f45
+6491	6499	1669371710338678343	lib/libgtest_main.a	1e85b0f0ec4748f6
+6499	6701	1669371710538675641	src/test/VDSProject_test	25d94f806f59bc49

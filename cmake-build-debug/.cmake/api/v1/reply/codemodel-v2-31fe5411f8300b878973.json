@@ -1,0 +1,257 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "/home/kristi/Desktop/vds-project/VDSProject_22_Group2/gtest/googletest-build",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-gtest.googletest-src-Debug-d2ed244693f5e7b1a1a9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "gtest/googletest-src"
+				},
+				{
+					"build" : "/home/kristi/Desktop/vds-project/VDSProject_22_Group2/gtest/googletest-build/googlemock",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-gtest.googletest-src.googlemock-Debug-d6cacecbfc6f1d6670f9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "gtest/googletest-src/googlemock",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "/home/kristi/Desktop/vds-project/VDSProject_22_Group2/gtest/googletest-build/googletest",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-gtest.googletest-src.googletest-Debug-2f1cb8aa63f7bf6d7de8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : "gtest/googletest-src/googletest",
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						5
+					],
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/test",
+					"jsonFile" : "directory-src.test-Debug-3607701395add829ebf1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 4,
+					"source" : "src/test",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						4
+					],
+					"name" : "VDSProject",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "gmock",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "gtest",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "VDSProject_test",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "Manager::@145eef247bfb46b6828c",
+					"jsonFile" : "target-Manager-Debug-dc2bc44065ef00ca230b.json",
+					"name" : "Manager",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "VDSProject::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VDSProject-Debug-aa2d7c157c97c2a2ee82.json",
+					"name" : "VDSProject",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "VDSProject_test::@b7fcbc08bf8df37e9c1b",
+					"jsonFile" : "target-VDSProject_test-Debug-82c5650dfd5982e14108.json",
+					"name" : "VDSProject_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gmock::@bae4ef9f6bbcdf3abaab",
+					"jsonFile" : "target-gmock-Debug-334b5fc354c11a0b2aa5.json",
+					"name" : "gmock",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gmock_main::@bae4ef9f6bbcdf3abaab",
+					"jsonFile" : "target-gmock_main-Debug-475a38de782424f95078.json",
+					"name" : "gmock_main",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gtest::@59d7d2c2e4fda0b825e1",
+					"jsonFile" : "target-gtest-Debug-66733d39ee3a8bc84d7c.json",
+					"name" : "gtest",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gtest_main::@59d7d2c2e4fda0b825e1",
+					"jsonFile" : "target-gtest_main-Debug-9f00ef5d88161c713f3d.json",
+					"name" : "gtest_main",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kristi/Desktop/vds-project/VDSProject_22_Group2/cmake-build-debug",
+		"source" : "/home/kristi/Desktop/vds-project/VDSProject_22_Group2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
