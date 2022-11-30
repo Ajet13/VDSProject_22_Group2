@@ -33,7 +33,7 @@ jobs:
     - name: make_project
       working-directory: ${{runner.workspace}}/build
       shell: bash
-      run: cmake --build . --config $BUILD_TYPE --target VDSProject_test
+      run: cmake --build . --config Release --target VDSProject_test
 
     - name: run_project
       working-directory: ${{runner.workspace}}/build
