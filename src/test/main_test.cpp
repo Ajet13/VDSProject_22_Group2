@@ -17,16 +17,16 @@ TEST (falseTest, isfalse) {
     EXPECT_EQ (man->False(), 0);
 }
 TEST (tableTest, tablesize) {
-    EXPECT_EQ (man->uniqueTableSize(), 0);
+    EXPECT_EQ (man->uniqueTableSize(), 3);
 }
 TEST (topvarTest, findname) {
-    EXPECT_EQ (man->getTopVarName(2), "L");
+    EXPECT_EQ (man->getTopVarName(2), "label");
 }
 TEST (topvarTest, findvalue) {
-    EXPECT_EQ (man->topVar(2), 0);
+    EXPECT_EQ (man->topVar(2), 2);
 }
 TEST (constantest, constant) {
-    EXPECT_TRUE(man->isConstant(2));
+    EXPECT_FALSE(man->isConstant(2));
 }
 TEST (variabletest, variable) {
     EXPECT_TRUE(man->isVariable(2));
