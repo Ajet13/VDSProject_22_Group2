@@ -16,7 +16,21 @@ TEST (trueTest, istrue) {
 TEST (falseTest, isfalse) {
     EXPECT_EQ (man->False(), 0);
 }
-
+TEST (tableTest, tablesize) {
+    EXPECT_EQ (man->uniqueTableSize(), 0);
+}
+TEST (topvarTest, findname) {
+    EXPECT_EQ (man->getTopVarName(2), "L");
+}
+TEST (topvarTest, findvalue) {
+    EXPECT_EQ (man->topVar(2), 0);
+}
+TEST (constantest, constant) {
+    EXPECT_TRUE(man->isConstant(2));
+}
+TEST (variabletest, variable) {
+    EXPECT_TRUE(man->isVariable(2));
+}
 int main(int argc, char* argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
