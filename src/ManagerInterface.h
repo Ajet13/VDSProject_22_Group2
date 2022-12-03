@@ -20,11 +20,11 @@ namespace ClassProject {
 
         virtual const BDD_ID &False() = 0;
 
-        //virtual bool isConstant(BDD_ID f) = 0;
+        virtual bool isConstant(BDD_ID f) = 0;
 
-        //virtual bool isVariable(BDD_ID x) = 0;
+        virtual bool isVariable(BDD_ID x) = 0;
 
-        //virtual BDD_ID topVar(BDD_ID f) = 0;
+        virtual BDD_ID topVar(BDD_ID f) = 0;
 
         //virtual BDD_ID ite(BDD_ID i, BDD_ID t, BDD_ID e) = 0;
 
@@ -50,13 +50,13 @@ namespace ClassProject {
 
         //virtual BDD_ID xnor2(BDD_ID a, BDD_ID b) = 0;
 
-        //virtual std::string getTopVarName(const BDD_ID &root) = 0;
+        virtual std::string getTopVarName(const BDD_ID &root) = 0;
 
         //virtual void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root) = 0;
 
         //virtual void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) = 0;
 
-        //virtual size_t uniqueTableSize() = 0;
+        virtual size_t uniqueTableSize() = 0;
     };
 }
 
