@@ -10,7 +10,10 @@ const BDD_ID &Manager::True(){
     static const Node test_true = {1,1,1,1,"T"};
     return test_true.node;
 }
-//const BDD_ID &False(){}
+const BDD_ID &Manager::False(){
+    static const Node test_false = {0,0,0,0,"F"};
+    return test_false.node;
+}
 //bool isConstant(BDD_ID f){}
 //bool isVariable(BDD_ID x){}
 //BDD_ID topVar(BDD_ID f){}

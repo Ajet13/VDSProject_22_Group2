@@ -13,6 +13,9 @@ TEST (CreatevarTest, createvar) {
 TEST (trueTest, istrue) {
     EXPECT_EQ (man->True(), 1);
 }
+TEST (falseTest, isfalse) {
+    EXPECT_EQ (man->False(), 0);
+}
 
 int main(int argc, char* argv[])
 {
