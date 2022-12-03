@@ -10,6 +10,9 @@ Manager *man = new Manager();
 TEST (CreatevarTest, createvar) {
     EXPECT_EQ (man->createVar("label"), 3);
 }
+TEST (trueTest, istrue) {
+    EXPECT_EQ (man->True(), 1);
+}
 
 int main(int argc, char* argv[])
 {
