@@ -6,7 +6,10 @@ BDD_ID Manager::createVar(const std::string &label){
     unique_table.push_back({unique_table.size(),0,1,unique_table.size(),label});
     return unique_table.size();
 }
-//const BDD_ID &True(){}
+const BDD_ID &Manager::True(){
+    static const Node test_true = {1,1,1,1,"T"};
+    return test_true.node;
+}
 //const BDD_ID &False(){}
 //bool isConstant(BDD_ID f){}
 //bool isVariable(BDD_ID x){}
