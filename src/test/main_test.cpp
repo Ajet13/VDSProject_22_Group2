@@ -8,7 +8,8 @@
 using namespace ClassProject;
 Manager *man = new Manager();
 TEST (CreatevarTest, createvar) {
-    EXPECT_EQ (man->createVar("label"), 3);
+    EXPECT_EQ (man->createVar("a"), 2);
+    EXPECT_EQ (man->createVar("b"), 3);
 }
 TEST (trueTest, istrue) {
     EXPECT_EQ (man->True(), 1);
@@ -17,10 +18,10 @@ TEST (falseTest, isfalse) {
     EXPECT_EQ (man->False(), 0);
 }
 TEST (tableTest, tablesize) {
-    EXPECT_EQ (man->uniqueTableSize(), 3);
+    EXPECT_EQ (man->uniqueTableSize(), 4);
 }
 TEST (topvarTest, findname) {
-    EXPECT_EQ (man->getTopVarName(2), "label");
+    EXPECT_EQ (man->getTopVarName(2), "a");
 }
 TEST (topvarTest, findvalue) {
     EXPECT_EQ (man->topVar(2), 2);
@@ -30,6 +31,26 @@ TEST (constantest, constant) {
 }
 TEST (variabletest, variable) {
     EXPECT_TRUE(man->isVariable(2));
+}
+TEST (COFTtest, Tnode) {
+    EXPECT_EQ(man->coFactorTrue(2),1);
+}
+TEST (COFFtest, Fnode) {
+    EXPECT_EQ(man->coFactorFalse(2),0);
+}
+TEST (COFT2test, respectto) {
+    EXPECT_EQ(man->coFactorTrue(2,2),1);
+}
+TEST (COFF2test, respectto) {
+    EXPECT_EQ(man->coFactorFalse(2,2),0);
+}
+TEST (itetest, variale) {
+    EXPECT_EQ(man->ite(2,2,0),2);
+}
+TEST (andtest, variales) {
+    EXPECT_EQ(man->and2(1,0),0); // 1 and 0 give 0
+    EXPECT_EQ(man->and2(1,1),1); // 1 and 1 give 1
+    EXPECT_EQ(man->and2(3,2),4); // a and b gives new bdd labeled 4
 }
 int main(int argc, char* argv[])
 {
