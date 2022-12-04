@@ -31,6 +31,21 @@ TEST (constantest, constant) {
 TEST (variabletest, variable) {
     EXPECT_TRUE(man->isVariable(2));
 }
+TEST (COFTtest, Tnode) {
+    EXPECT_EQ(man->coFactorTrue(2),1);
+}
+TEST (COFFtest, Fnode) {
+    EXPECT_EQ(man->coFactorFalse(2),0);
+}
+TEST (COFT2test, respectto) {
+    EXPECT_EQ(man->coFactorTrue(2,2),1);
+}
+TEST (COFF2test, respectto) {
+    EXPECT_EQ(man->coFactorFalse(2,2),0);
+}
+TEST (itetest, variale) {
+    EXPECT_EQ(man->ite(2,2,0),0);
+}
 int main(int argc, char* argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
