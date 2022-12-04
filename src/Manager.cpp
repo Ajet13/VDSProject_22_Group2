@@ -5,7 +5,7 @@ using namespace ClassProject;
 
 BDD_ID Manager::createVar(const std::string &label){
     unique_table.push_back({1,0,unique_table.size(),label});
-    return unique_table.size();
+    return unique_table.size()-1;
 }
 const BDD_ID &Manager::True(){
     //static const Node test_true = {1,1,1,1,"T"};
