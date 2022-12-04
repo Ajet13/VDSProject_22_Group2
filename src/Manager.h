@@ -39,7 +39,7 @@ namespace ClassProject {
         BDD_ID coFactorTrue(BDD_ID f);
         BDD_ID coFactorFalse(BDD_ID f);
         //BDD_ID neg(BDD_ID a);
-        //BDD_ID and2(BDD_ID a, BDD_ID b);
+        BDD_ID and2(BDD_ID a, BDD_ID b);
         //BDD_ID or2(BDD_ID a, BDD_ID b);
         //BDD_ID xor2(BDD_ID a, BDD_ID b);
         //BDD_ID nand2(BDD_ID a, BDD_ID b);

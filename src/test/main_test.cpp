@@ -47,6 +47,11 @@ TEST (COFF2test, respectto) {
 TEST (itetest, variale) {
     EXPECT_EQ(man->ite(2,2,0),2);
 }
+TEST (andtest, variales) {
+    EXPECT_EQ(man->and2(1,0),0); // 1 and 0 give 0
+    EXPECT_EQ(man->and2(1,1),1); // 1 and 1 give 1
+    EXPECT_EQ(man->and2(3,2),4); // a and b gives new bdd labeled 4
+}
 int main(int argc, char* argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);

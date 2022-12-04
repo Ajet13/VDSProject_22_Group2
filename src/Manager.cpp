@@ -50,7 +50,7 @@ BDD_ID Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e){
     }
     if(!found) {
         unique_table.push_back({top_variable, r_low, r_high});
-        count=uniqueTableSize();
+        count=uniqueTableSize()-1; //to be reviewed
     }
     computed_table.push_back({i,t,e,count});
     return count;
@@ -70,7 +70,14 @@ BDD_ID Manager::coFactorFalse(BDD_ID f){
     return unique_table[f].node_low;
 }
 //BDD_ID neg(BDD_ID a){}
-//BDD_ID and2(BDD_ID a, BDD_ID b){}
+BDD_ID Manager::and2(BDD_ID a, BDD_ID b){
+    BDD_ID out = ite(a,b,0);
+    unique_table[out].label = unique_table[a].label+"&"+unique_table[b].label; //questionable
+    //for(auto iter : unique_table){
+    //        std::cout<<"//"<<iter.top_var<<"//"<<iter.node_low<<"//"<<iter.node_high<<"//"<<iter.label<<"\n";
+    //}
+    return out;
+}
 //BDD_ID or2(BDD_ID a, BDD_ID b){}
 //BDD_ID xor2(BDD_ID a, BDD_ID b){}
 //BDD_ID nand2(BDD_ID a, BDD_ID b){}
