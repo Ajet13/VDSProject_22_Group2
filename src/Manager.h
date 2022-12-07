@@ -46,8 +46,8 @@ namespace ClassProject {
         BDD_ID nor2(BDD_ID a, BDD_ID b);
         BDD_ID xnor2(BDD_ID a, BDD_ID b);
         std::string getTopVarName(const BDD_ID &root);
-        //void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root);
-        //void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root);
+        void findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root);
+        void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root);
         size_t uniqueTableSize();
 
         Manager(){//Ctor

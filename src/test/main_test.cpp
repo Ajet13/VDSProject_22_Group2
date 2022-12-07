@@ -88,10 +88,23 @@ int main(int argc, char* argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
     RUN_ALL_TESTS();
+    Manager *t = new Manager();
+    BDD_ID a=t->createVar("a");
+    BDD_ID b=t->createVar("b");
+    BDD_ID c=t->createVar("c");
+    BDD_ID d=t->createVar("d");
+    BDD_ID fin = t->and2(t->or2(a,b),t->and2(c,d));
     int count = 0;
-    for(auto iter : man->unique_table){
+    for(auto iter : t->unique_table){
         std::cout<<count<<"|"<<iter.top_var<<"|"<<iter.node_low<<"|"<<iter.node_high<<"|"<<iter.label<<"\n";
         count++;
     }
-    return 1;
+    std::set<BDD_ID> nodeset;
+    std::set<BDD_ID> varset;
+    t->findNodes(fin,nodeset);
+    for(auto it : nodeset) std::cout<<it<<",";
+    std::cout<<"\n";
+    t->findVars(fin,varset);
+    for(auto it: varset) std::cout<<it<<",";
+    return 0;
 }
