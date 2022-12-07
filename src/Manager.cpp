@@ -120,9 +120,8 @@ std::string Manager::getTopVarName(const BDD_ID &root){
     return unique_table[root].label;
 }
 void Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root){
-    // if to implement the funct to return also const nodes put first line under if above it
+    nodes_of_root.insert(root);
     if(!isConstant(root)){
-        nodes_of_root.insert(root);
         findNodes(coFactorTrue(root),nodes_of_root);
         findNodes(coFactorFalse(root),nodes_of_root);
     }
@@ -130,7 +129,7 @@ void Manager::findNodes(const BDD_ID &root, std::set<BDD_ID> &nodes_of_root){
 void Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root){
     std::set<BDD_ID> NOF;
     findNodes(root,NOF);
-    for(auto iter:NOF) vars_of_root.insert(topVar(iter));
+    for(auto iter:NOF) if(!isConstant(iter)) vars_of_root.insert(topVar(iter));
 }
 size_t Manager::uniqueTableSize(){
     return unique_table.size();
