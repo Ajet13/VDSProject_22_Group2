@@ -230,28 +230,11 @@ Lucas Deutschmann & Philipp Schmitz - vds_cp@eit.uni-kl.de
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-Thank you Mjeshtri for the work on this README.md.
 
-
-You might find helpful links below.
-
-### Project Related Resources
-
-#### Given Task Links
-* [WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
-* [Google Test](https://github.com/google/googletest)
-* [GitHub CI Interactive Tutorial](https://lab.github.com/githubtraining/github-actions:-hello-world)
-* [Documenting C++ Code](https://developer.lsst.io/cpp/api-docs.html)
-* [Doxygen Examples](https://www.doxygen.nl/results.html)
-* [WSL Integration for CLion](https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-product.html#wsl-tooclhain)
-* [How to install Boost library in Ubuntu](https://stackoverflow.com/questions/12578499/how-to-install-boost-on-ubuntu)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 #### Additional Materials
-
-* [README Template](https://github.com/othneildrew/Best-README-Template)
-* [Travis CI Examples](https://github.com/deftio/travis-ci-cpp-example)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
