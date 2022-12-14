@@ -48,7 +48,7 @@
 In the course of this Lab assignment students are going to implement a minimal BDD package in C++. This package implements the fundamental manipulation methods for ROBDDs as they were introduced in the lecture Verification of Digital Systems by Prof. Kunz. The package will be implemented using the Test Driven Development (TDD) paradigm presented by Dr. Wedler.
 
 The project is split into three parts:
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 #### Part1:
 Implementation of the basic functionality of the BDD package using the TDD methodology. This is the biggest part of the project.
@@ -59,7 +59,7 @@ Main tasks in this part:
 * Verify the code using GTest
 * Set up a Continuous Integration (CI) pipeline with GitHub Actions **(Mandatory)**
 * Use Doxygen (or a similar tool) to generate documentation for the API. _(Optional)_
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!--
@@ -76,7 +76,7 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 Use the `BLANK_README.md` to get started.
 -->
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 <!-- CONTACT -->
 ## Contact
