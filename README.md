@@ -30,6 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/TUK-EIS/VDSProject">
+    <img src="doc/figures/TUKL_LOGO_4C.png" alt="Logo" width="400" height="200">
   </a>
   <h3 align="center">
   VDS Class Project
