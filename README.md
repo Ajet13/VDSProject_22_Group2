@@ -93,17 +93,6 @@ Main tasks in this part:
 * Use Doxygen (or a similar tool) to generate documentation for the API. _(Optional)_
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-#### Part2:
-Improvement of the performance of the implementation via provided benchmarks.
-
-Main tasks in this part:
-* Learning how to identify performance bottlenecks within the code.
-* Analyzing benchmark results.
-* How to overcome bottlenecks.
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-#### Part3:
-Extending the existing implementation by a practical application of BDD. Using BDDs, it is possible to symbolically represent a state-space. This representation allows to check quickly, whether a specific state is within the reachable state space or not.
 
 <!--
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -121,103 +110,6 @@ Use the `BLANK_README.md` to get started.
 -->
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-
-
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-Fork this repository and follow the instructions given in doc/ to complete the project.
-<!--
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
--->
-### Prerequisites
-List of Ubuntu packages required to complete the project:
-
-* git-all
-* libboost-all-dev
-* build-essential
-
-
-_No guarantee that this list is complete (Add other packages to the README)_
-<!--
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
--->
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-### Installation
-1. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/VDSProject
-   ```
-**Installation with CLion**
-
-CLion comes with CMake. 
-2. Open CLion and open VDSProject/CMakeLists.txt as a project.
-3. Select your target and build the project.
-   
-**Installation without CLion**
-
-
-2. Navigate to the project folder and create a build directory
-    ```sh
-    cd VDSProject && mkdir build
-    ```
-3. Navigate to the build folder and invoke CMake
-    ```sh
-    cd build && cmake ../
-    ```
-4. Invoke make
-    ```sh
-    make
-    ```   
-<!--
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
--->
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-#### Part-1
-- [ ] TODO
-- [X] DONE
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-#### Part-2
-- [ ] TODO
-- [X] DONE
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-#### Part-3
-- [ ] TODO
-- [X] DONE
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- CONTACT -->
 ## Contact
 
@@ -231,12 +123,6 @@ Lucas Deutschmann & Philipp Schmitz - vds_cp@eit.uni-kl.de
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-#### Additional Materials
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
