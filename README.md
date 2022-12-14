@@ -230,7 +230,7 @@ Lucas Deutschmann & Philipp Schmitz - vds_cp@eit.uni-kl.de
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-Thank you Veli Durmuşcan, Shreya Vithal Kulhalli and Osama Omar Youssif Ayoub for the work on this README.md.
+Thank you Mjeshtri for the work on this README.md.
 
 
 You might find helpful links below.
