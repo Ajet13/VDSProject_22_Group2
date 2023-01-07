@@ -115,7 +115,7 @@ BDD_ID Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e) {
 BDD_ID Manager::coFactorTrue(BDD_ID f, BDD_ID x) {
     if (isConstant(f) || isConstant(x) || unique_table[f].top_var > x) return f;
     if (unique_table[f].top_var == x) return unique_table[f].node_high;
-    else if (unique_table[f].top_var < x) {
+    else {
         BDD_ID T = coFactorTrue(unique_table[f].node_high, x);
         BDD_ID F = coFactorTrue(unique_table[f].node_low, x);
         return ite(unique_table[f].top_var, T, F);
@@ -131,7 +131,7 @@ BDD_ID Manager::coFactorTrue(BDD_ID f, BDD_ID x) {
 BDD_ID Manager::coFactorFalse(BDD_ID f, BDD_ID x) {
     if (isConstant(f) || isConstant(x) || unique_table[f].top_var > x) return f;
     if (unique_table[f].top_var == x) return unique_table[f].node_low;
-    else if (unique_table[f].top_var < x) {
+    else{
         BDD_ID T = coFactorFalse(unique_table[f].node_high, x);
         BDD_ID F = coFactorFalse(unique_table[f].node_low, x);
         return ite(unique_table[f].top_var, T, F);
@@ -166,7 +166,7 @@ BDD_ID Manager::coFactorFalse(BDD_ID f) {
  */
 BDD_ID Manager::neg(BDD_ID a) {
     BDD_ID out = ite(a, 0, 1);
-    if (std::empty(unique_table[out].label))unique_table[out].label = "~" + unique_table[a].label; //questionable
+    //if (std::empty(unique_table[out].label))unique_table[out].label = "~" + unique_table[a].label; //questionable
     return out;
 }
 
@@ -178,8 +178,8 @@ BDD_ID Manager::neg(BDD_ID a) {
  */
 BDD_ID Manager::and2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, b, 0);
-    if (std::empty(unique_table[out].label))
-        unique_table[out].label = unique_table[a].label + "&" + unique_table[b].label; //questionable
+    //if (std::empty(unique_table[out].label))
+    //    unique_table[out].label = unique_table[a].label + "&" + unique_table[b].label; //questionable
     return out;
 }
 
@@ -191,8 +191,8 @@ BDD_ID Manager::and2(BDD_ID a, BDD_ID b) {
  */
 BDD_ID Manager::or2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, 1, b);
-    if (std::empty(unique_table[out].label))
-        unique_table[out].label = unique_table[a].label + "+" + unique_table[b].label; //questionable
+    //if (std::empty(unique_table[out].label))
+    //    unique_table[out].label = unique_table[a].label + "+" + unique_table[b].label; //questionable
     return out;
 }
 
@@ -204,8 +204,8 @@ BDD_ID Manager::or2(BDD_ID a, BDD_ID b) {
  */
 BDD_ID Manager::xor2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, neg(b), b);
-    if (std::empty(unique_table[out].label))
-        unique_table[out].label = unique_table[a].label + "⊕" + unique_table[b].label; //questionable
+    //if (std::empty(unique_table[out].label))
+    //    unique_table[out].label = unique_table[a].label + "⊕" + unique_table[b].label; //questionable
     return out;
 }
 
@@ -217,8 +217,8 @@ BDD_ID Manager::xor2(BDD_ID a, BDD_ID b) {
  */
 BDD_ID Manager::nand2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, neg(b), 1);
-    if (std::empty(unique_table[out].label))
-        unique_table[out].label = unique_table[a].label + "‾" + unique_table[b].label; //questionable
+    //if (std::empty(unique_table[out].label))
+    //    unique_table[out].label = unique_table[a].label + "‾" + unique_table[b].label; //questionable
     return out;
 }
 
@@ -230,8 +230,8 @@ BDD_ID Manager::nand2(BDD_ID a, BDD_ID b) {
  */
 BDD_ID Manager::nor2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, 0, neg(b));
-    if (std::empty(unique_table[out].label))
-        unique_table[out].label = unique_table[a].label + "∓" + unique_table[b].label; //questionable
+    //if (std::empty(unique_table[out].label))
+    //    unique_table[out].label = unique_table[a].label + "∓" + unique_table[b].label; //questionable
     return out;
 }
 
@@ -243,8 +243,8 @@ BDD_ID Manager::nor2(BDD_ID a, BDD_ID b) {
  */
 BDD_ID Manager::xnor2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, b, neg(b));
-    if (std::empty(unique_table[out].label))
-        unique_table[out].label = unique_table[a].label + "⊙" + unique_table[b].label; //questionable
+    //if (std::empty(unique_table[out].label))
+    //    unique_table[out].label = unique_table[a].label + "⊙" + unique_table[b].label; //questionable
     return out;
 }
 
