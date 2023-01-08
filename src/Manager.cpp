@@ -18,6 +18,7 @@ BDD_ID Manager::createVar(const std::string &label) {
         }
     }
     unique_table.push_back({1, 0, unique_table.size(), label});
+    new_unique_table[{1,0,uniqueTableSize()-1}]=uniqueTableSize()-1;
     return unique_table.size() - 1;
 }
 
@@ -92,7 +93,7 @@ BDD_ID Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e) {
     BDD_ID r_high = ite(coFactorTrue(i, top_variable), coFactorTrue(t, top_variable), coFactorTrue(e, top_variable));
     BDD_ID r_low = ite(coFactorFalse(i, top_variable), coFactorFalse(t, top_variable), coFactorFalse(e, top_variable));
     if (r_high == r_low) return r_high;
-    BDD_ID count = 0;
+    /*BDD_ID count = 0;
     bool found = false;
     for (auto iter: unique_table) {
         if (iter.top_var == top_variable & iter.node_high == r_high & iter.node_low == r_low) {
@@ -104,10 +105,16 @@ BDD_ID Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e) {
     if (!found) {
         unique_table.push_back({r_high, r_low, top_variable});
         count = uniqueTableSize() - 1; //to be reviewed
+    }*/
+    if(auto search = new_unique_table.find({r_high,r_low,top_variable}); search != new_unique_table.end()){
+        new_ct_table[{i,t,e}]=search->second;
+        return search->second;
     }
+    unique_table.push_back({r_high, r_low, top_variable});
+    new_unique_table[{r_high, r_low, top_variable}]=uniqueTableSize() - 1;
     //computed_table.push_back({i, t, e, count});
-    new_ct_table[{i,t,e}]=count;
-    return count;
+    //new_ct_table[{i,t,e}]=count;
+    return uniqueTableSize()-1;
 }
 
 /**
@@ -296,9 +303,4 @@ void Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) {
  */
 size_t Manager::uniqueTableSize() {
     return unique_table.size();
-}
-
-bool Manager::find_CT(const BDD_ID i, const BDD_ID t, const BDD_ID e) {
-    auto search = new_ct_table.find({i,t,e});
-    return true;
 }

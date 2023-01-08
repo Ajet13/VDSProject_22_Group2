@@ -58,8 +58,6 @@ namespace ClassProject {
         virtual void findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) = 0;
 
         virtual size_t uniqueTableSize() = 0;
-
-        virtual bool find_CT(const BDD_ID i, const BDD_ID t, const BDD_ID e) =  0;
     };
 }
 
