@@ -1,6 +1,7 @@
 #include "Manager.h"
 #include "algorithm"
 #include "iostream"
+#include "unordered_map"
 
 using namespace ClassProject;
 
@@ -80,9 +81,11 @@ BDD_ID Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e) {
     if (i == False()) return e;
     if (t == e) return t;
     if (t == True() & e == False()) return i;
-    for (auto iter: computed_table) {
-        if (iter.i == i & iter.e == e & iter.t == t) return (iter.r);
-    }
+    //for (auto iter: computed_table) {
+    //    if (iter.i == i & iter.e == e & iter.t == t) return (iter.r);
+    //}
+    if(auto search = new_ct_table.find({i,t,e}); search != new_ct_table.end())
+        return search->second;
     BDD_ID top_variable = isConstant(t) ? topVar(i) : std::min(topVar(i), topVar(t));
     BDD_ID top_variable2 = isConstant(e) ? topVar(i) : std::min(topVar(i), topVar(e));
     top_variable = std::min(top_variable, top_variable2);
@@ -102,7 +105,8 @@ BDD_ID Manager::ite(BDD_ID i, BDD_ID t, BDD_ID e) {
         unique_table.push_back({r_high, r_low, top_variable});
         count = uniqueTableSize() - 1; //to be reviewed
     }
-    computed_table.push_back({i, t, e, count});
+    //computed_table.push_back({i, t, e, count});
+    new_ct_table[{i,t,e}]=count;
     return count;
 }
 
@@ -292,4 +296,9 @@ void Manager::findVars(const BDD_ID &root, std::set<BDD_ID> &vars_of_root) {
  */
 size_t Manager::uniqueTableSize() {
     return unique_table.size();
+}
+
+bool Manager::find_CT(const BDD_ID i, const BDD_ID t, const BDD_ID e) {
+    auto search = new_ct_table.find({i,t,e});
+    return true;
 }
