@@ -42,7 +42,7 @@ namespace ClassProject {
          * @returns true, if the given state is in the reachable state set
          * @throws std::runtime_error if size does not match with number of state bits
          */
-        virtual bool isReachable(const std::vector<bool> &stateVector) = 0;
+        //virtual bool isReachable(const std::vector<bool> &stateVector) = 0;
 
         /**
          * Each state variable has a transition function.
@@ -58,7 +58,7 @@ namespace ClassProject {
          * @param transitionFunctions provide a transition function exactly for each state bit
          * @throws std::runtime_error
          */
-        virtual void setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) = 0;
+        //virtual void setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) = 0;
 
         /**
          * Provides an initial state for the system as a vector of boolean values.
@@ -68,7 +68,7 @@ namespace ClassProject {
          * @param stateVector provides the assignment for each state bit
          * @throws std::runtime_error if size does not match with number of state bits
          */
-        virtual void setInitState(const std::vector<bool> &stateVector) = 0;
+        //virtual void setInitState(const std::vector<bool> &stateVector) = 0;
 
     };
 }

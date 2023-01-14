@@ -5,6 +5,8 @@
 #include "Reachability.h"
 
 using namespace ClassProject;
+std::unique_ptr<ClassProject::ReachabilityInterface> fsm2 = std::make_unique<ClassProject::Reachability>(2);
+
 /*
 struct ReachabilityTest : testing::Test {
 
