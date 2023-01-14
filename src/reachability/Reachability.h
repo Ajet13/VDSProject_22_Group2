@@ -31,7 +31,7 @@ namespace ClassProject {
 
         const std::vector<BDD_ID> &getStates() const override;
 
-        //bool isReachable(const std::vector<bool> &stateVector) override;
+        bool isReachable(const std::vector<bool> &stateVector) override;
 
         void setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) override;
 

@@ -7,7 +7,7 @@
 using namespace ClassProject;
 //std::unique_ptr<ClassProject::ReachabilityInterface> fsm2 = std::make_unique<ClassProject::Reachability>(2);
 
-/*
+
 struct ReachabilityTest : testing::Test {
 
     std::unique_ptr<ClassProject::ReachabilityInterface> fsm2 = std::make_unique<ClassProject::Reachability>(2);
@@ -17,7 +17,7 @@ struct ReachabilityTest : testing::Test {
 
 };
 
-TEST_F(ReachabilityTest, HowTo_Example) { /* NOLINT *//*
+TEST_F(ReachabilityTest, HowTo_Example) { /* NOLINT */
 
     BDD_ID s0 = stateVars2.at(0);
     BDD_ID s1 = stateVars2.at(1);
@@ -33,5 +33,5 @@ TEST_F(ReachabilityTest, HowTo_Example) { /* NOLINT *//*
     ASSERT_FALSE(fsm2->isReachable({true, false}));
     ASSERT_TRUE(fsm2->isReachable({true, true}));
 }
-*/
+
 #endif

@@ -42,7 +42,7 @@ namespace ClassProject {
          * @returns true, if the given state is in the reachable state set
          * @throws std::runtime_error if size does not match with number of state bits
          */
-        //virtual bool isReachable(const std::vector<bool> &stateVector) = 0;
+        virtual bool isReachable(const std::vector<bool> &stateVector) = 0;
 
         /**
          * Each state variable has a transition function.
