@@ -13,6 +13,7 @@ namespace ClassProject {
     public:
 
         ReachabilityInterface() = delete;
+
         virtual ~ReachabilityInterface() = default;
 
         /**

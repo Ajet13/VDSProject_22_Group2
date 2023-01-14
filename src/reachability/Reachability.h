@@ -20,10 +20,11 @@ namespace ClassProject {
             else {
                 for (unsigned int i = 0; i < stateSize; i++) {
                     init_states.push_back(false);
-                    current_states.push_back(Manager::createVar("s"+ std::to_string(i))); //use of labels as createvar method doesn't accept same label var
+                    current_states.push_back(Manager::createVar(
+                            "s" + std::to_string(i))); //use of labels as createvar method doesn't accept same label var
                 }
-                for (unsigned int i = 0; i < stateSize; i++){
-                    next_states.push_back(Manager::createVar("s'"+std::to_string(i)));
+                for (unsigned int i = 0; i < stateSize; i++) {
+                    next_states.push_back(Manager::createVar("s'" + std::to_string(i)));
                 }
                 transition_functions = current_states; //transition function is identity function A*1 or A+0 gives A so same ID
             }

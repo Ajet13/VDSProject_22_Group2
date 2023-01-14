@@ -177,7 +177,7 @@ BDD_ID Manager::coFactorFalse(BDD_ID f) {
  */
 BDD_ID Manager::neg(BDD_ID a) {
     BDD_ID out = ite(a, 0, 1);
-    //if (std::empty(unique_table[out].label))unique_table[out].label = "~" + unique_table[a].label; //questionable
+    if (std::empty(unique_table[out].label))unique_table[out].label = "~" + unique_table[a].label; //questionable
     return out;
 }
 
@@ -189,8 +189,8 @@ BDD_ID Manager::neg(BDD_ID a) {
  */
 BDD_ID Manager::and2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, b, 0);
-    //if (std::empty(unique_table[out].label))
-    //    unique_table[out].label = unique_table[a].label + "&" + unique_table[b].label; //questionable
+    if (std::empty(unique_table[out].label))
+        unique_table[out].label = unique_table[a].label + "&" + unique_table[b].label; //questionable
     return out;
 }
 
@@ -202,8 +202,8 @@ BDD_ID Manager::and2(BDD_ID a, BDD_ID b) {
  */
 BDD_ID Manager::or2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, 1, b);
-    //if (std::empty(unique_table[out].label))
-    //    unique_table[out].label = unique_table[a].label + "+" + unique_table[b].label; //questionable
+    if (std::empty(unique_table[out].label))
+        unique_table[out].label = unique_table[a].label + "+" + unique_table[b].label; //questionable
     return out;
 }
 
@@ -215,8 +215,8 @@ BDD_ID Manager::or2(BDD_ID a, BDD_ID b) {
  */
 BDD_ID Manager::xor2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, neg(b), b);
-    //if (std::empty(unique_table[out].label))
-    //    unique_table[out].label = unique_table[a].label + "⊕" + unique_table[b].label; //questionable
+    if (std::empty(unique_table[out].label))
+        unique_table[out].label = unique_table[a].label + "⊕" + unique_table[b].label; //questionable
     return out;
 }
 
@@ -228,8 +228,8 @@ BDD_ID Manager::xor2(BDD_ID a, BDD_ID b) {
  */
 BDD_ID Manager::nand2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, neg(b), 1);
-    //if (std::empty(unique_table[out].label))
-    //    unique_table[out].label = unique_table[a].label + "‾" + unique_table[b].label; //questionable
+    if (std::empty(unique_table[out].label))
+        unique_table[out].label = unique_table[a].label + "‾" + unique_table[b].label; //questionable
     return out;
 }
 
@@ -241,8 +241,8 @@ BDD_ID Manager::nand2(BDD_ID a, BDD_ID b) {
  */
 BDD_ID Manager::nor2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, 0, neg(b));
-    //if (std::empty(unique_table[out].label))
-    //    unique_table[out].label = unique_table[a].label + "∓" + unique_table[b].label; //questionable
+    if (std::empty(unique_table[out].label))
+        unique_table[out].label = unique_table[a].label + "∓" + unique_table[b].label; //questionable
     return out;
 }
 
@@ -254,8 +254,8 @@ BDD_ID Manager::nor2(BDD_ID a, BDD_ID b) {
  */
 BDD_ID Manager::xnor2(BDD_ID a, BDD_ID b) {
     BDD_ID out = ite(a, b, neg(b));
-    //if (std::empty(unique_table[out].label))
-    //    unique_table[out].label = unique_table[a].label + "⊙" + unique_table[b].label; //questionable
+    if (std::empty(unique_table[out].label))
+        unique_table[out].label = unique_table[a].label + "⊙" + unique_table[b].label; //questionable
     return out;
 }
 
