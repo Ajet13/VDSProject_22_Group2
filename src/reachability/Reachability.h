@@ -27,16 +27,15 @@ namespace ClassProject {
                 }
                 transition_functions = current_states; //transition function is identity function A*1 or A+0 gives A so same ID
             }
-            //compute states
         }
 
         const std::vector<BDD_ID> &getStates() const override;
 
         //bool isReachable(const std::vector<bool> &stateVector) override;
 
-        //void setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) override;
+        void setTransitionFunctions(const std::vector<BDD_ID> &transitionFunctions) override;
 
-        //void setInitState(const std::vector<bool> &stateVector) override;
+        void setInitState(const std::vector<bool> &stateVector) override;
     };
 
 }
