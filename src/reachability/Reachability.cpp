@@ -8,6 +8,8 @@ const std::vector<BDD_ID> &Reachability::getStates() const {
 }
 
 bool Reachability::isReachable(const std::vector<bool> &stateVector) {
+    if (stateVector.size() != current_states.size())
+        throw std::runtime_error("no match to the number of state bits with states asked");
     BDD_ID tao = Manager::True();
     for (unsigned int i = 0; i < next_states.size(); i++)
         tao = and2(xnor2(next_states[i], transition_functions[i]), tao);
